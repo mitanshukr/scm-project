@@ -7,8 +7,8 @@
 <body class="bg-gray-100">
 <main class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm mt-4 m-auto">
     <h1 class="text-2xl font-bold mb-6 text-center">Signup</h1>
-    <div data-th-replace="~{message :: messagebox}"></div>
-    <form action="/do-signup" data-th-object="${userData}" method="POST" class="space-y-4">
+    <div data-th-replace="~{message :: messagebox(${message})}"></div>
+    <form th:action="@{/do-signup}" data-th-object="${userData}" method="POST" class="space-y-4">
         <div>
             <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
             <input type="text" id="fullname" name="fullname" data-th-field="*{name}"

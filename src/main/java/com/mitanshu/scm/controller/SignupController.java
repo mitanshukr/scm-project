@@ -30,8 +30,8 @@ public class SignupController {
 
     @RequestMapping(value = "/do-signup", method = RequestMethod.POST)
     public String doSignup(@ModelAttribute("userData") User user, RedirectAttributes redirectAttributes) {
-        user.setId(1l);
-        user.setProvider(SignupProvider.GOOGLE);
+//        user.setId(1l);
+//        user.setProvider(SignupProvider.GOOGLE);
         List<SocialLink> links = new ArrayList<>();
         links.add(new SocialLink(1l, "Facebook", "https://facebook.com/mitanshu", user));
         links.add(new SocialLink(2l, "Instagram", "https://instagram.com/mitanshu", user));
